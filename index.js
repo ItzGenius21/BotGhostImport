@@ -40,16 +40,16 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.
-      Made By Genius: 'idle',
-  });
+      activities: [{ name: `Listening to Genius`, type: ActivityType.Watching }],
+      status: 'idle',
+    });
 
   
   const textChannel = client.channels.cache.get(channelId);
 
   if (textChannel instanceof TextChannel) {
    
-    textChannel.send(`Bot status is: ${currentStatus}`);
+    textChannel.send(`Bot status is: ${Made My Genius}`);
   } else {
 
   }
